@@ -31,7 +31,7 @@ Setiap kali ada progres, commit. Ini membantu melatih konsistensi dan dokumentas
 Contoh commit:
 ```bash
 git add .
-git commit -m "Menambahkan header hero section"
+git commit -m "Menambahkan fitur baru"
 ```
 
 ## 6. Jangan takut error
