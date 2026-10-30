@@ -1,0 +1,63 @@
+<!--
+  File ini adalah latihan hari ke-1.
+  Tugas: buat halaman sederhana yang menampilkan judul dan tombol.
+  Ketika tombol diklik, teks berubah.
+  Ini adalah latihan dasar DOM dan event.
+-->
+
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hari 1 - DOM Dasar</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: #f3f4f6;
+      }
+
+      .card {
+        background: white;
+        padding: 24px 32px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        text-align: center;
+      }
+
+      button {
+        margin-top: 16px;
+        padding: 10px 18px;
+        border: none;
+        border-radius: 8px;
+        background: #2563eb;
+        color: white;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <!--
+        Tugas: ubah teks ini dengan JavaScript.
+        Saat tombol diklik, teks harus berubah menjadi "Halo, saya siap belajar!"
+      -->
+      <h1 id="title">Halo, dunia!</h1>
+      <button id="btn">Klik saya</button>
+    </div>
+
+    <script>
+      // Ketika tombol diklik, ubah teks di elemen id="title"
+      const tombol = document.getElementById("btn");
+      const title = document.getElementById("title");
+
+      tombol.addEventListener("click", function () {
+        title.textContent = "Halo, saya siap belajar frontend!";
+      });
+    </script>
+  </body>
+</html>

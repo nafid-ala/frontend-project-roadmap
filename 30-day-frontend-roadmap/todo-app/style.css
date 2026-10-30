@@ -1,0 +1,39 @@
+<!--
+  File ini adalah starter project to-do app.
+  Tugas utama:
+  1. input task
+  2. tombol tambah task
+  3. tampilkan task di daftar
+  4. hapus task
+  5. simpan ke localStorage
+
+  Petunjuk:
+  - Buka file ini di browser
+  - Coba tambah task
+  - Cek apakah task muncul di daftar
+  - Cek localStorage di browser devtools
+-->
+
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-do App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <h1>To-do List</h1>
+
+      <div class="input-group">
+        <input id="taskInput" type="text" placeholder="Masukkan tugas baru" />
+        <button id="addBtn">Tambah</button>
+      </div>
+
+      <ul id="taskList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

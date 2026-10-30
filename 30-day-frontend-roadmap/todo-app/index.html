@@ -1,0 +1,94 @@
+<!--
+  File ini adalah latihan hari ke-3.
+  Tugas: buat form sederhana yang menampilkan nama dan pesan setelah submit.
+  Ini melatih event submit, value input, dan DOM.
+-->
+
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hari 3 - Form Submit</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f0fdf4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .card {
+        background: white;
+        width: 420px;
+        border-radius: 12px;
+        padding: 24px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      input, textarea, button {
+        width: 100%;
+        margin-top: 10px;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+      button {
+        background: #16a34a;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      #hasil {
+        margin-top: 20px;
+        background: #ecfdf5;
+        padding: 12px;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Form Sederhana</h2>
+      <form id="formPesan">
+        <input id="nama" type="text" placeholder="Nama kamu" />
+        <textarea id="pesan" rows="4" placeholder="Tulis pesan"></textarea>
+        <button type="submit">Kirim</button>
+      </form>
+
+      <div id="hasil">
+        <!--
+          Tugas: saat form dikirim, tampilkan hasil di sini.
+          Contoh: "Halo, Budi! Pesan kamu: ..."
+        -->
+        Belum ada pesan.
+      </div>
+    </div>
+
+    <script>
+      const form = document.getElementById("formPesan");
+      const namaInput = document.getElementById("nama");
+      const pesanInput = document.getElementById("pesan");
+      const hasil = document.getElementById("hasil");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const nama = namaInput.value.trim();
+        const pesan = pesanInput.value.trim();
+
+        if (!nama || !pesan) {
+          alert("Nama dan pesan harus diisi.");
+          return;
+        }
+
+        hasil.textContent = `Halo, ${nama}! Pesan kamu: ${pesan}`;
+        form.reset();
+      });
+    </script>
+  </body>
+</html>
