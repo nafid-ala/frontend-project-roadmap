@@ -1,0 +1,108 @@
+<!--
+  Hari ke-12: To-do App Bertahap 1
+  Tugas:
+  1. tambah task
+  2. tampilkan task
+  3. hapus task
+  4. simpan ke localStorage
+-->
+
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 12 - To-do App</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #e0f2fe;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .card {
+        width: 480px;
+        background: white;
+        border-radius: 14px;
+        padding: 24px;
+      }
+      .input-row {
+        display: flex;
+        gap: 10px;
+      }
+      input, button {
+        padding: 10px 12px;
+        border-radius: 8px;
+      }
+      input {
+        flex: 1;
+      }
+      button {
+        background: #2563eb;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      ul {
+        padding-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>To-do App</h2>
+      <div class="input-row">
+        <input id="taskInput" type="text" placeholder="Masukkan tugas" />
+        <button id="addBtn">Tambah</button>
+      </div>
+      <ul id="taskList"></ul>
+    </div>
+
+    <script>
+      const taskInput = document.getElementById("taskInput");
+      const addBtn = document.getElementById("addBtn");
+      const taskList = document.getElementById("taskList");
+
+      let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+      function renderTasks() {
+        taskList.innerHTML = "";
+
+        tasks.forEach((task, index) => {
+          const li = document.createElement("li");
+          li.textContent = task.name;
+
+          const delBtn = document.createElement("button");
+          delBtn.textContent = "Hapus";
+          delBtn.style.marginLeft = "12px";
+          delBtn.addEventListener("click", () => {
+            tasks.splice(index, 1);
+            localStorage.setItem("tasks", JSON.stringify(tasks));
+            renderTasks();
+          });
+
+          li.appendChild(delBtn);
+          taskList.appendChild(li);
+        });
+      }
+
+      addBtn.addEventListener("click", () => {
+        const value = taskInput.value.trim();
+
+        if (!value) {
+          alert("Tugas tidak boleh kosong");
+          return;
+        }
+
+        tasks.push({ name: value });
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+        taskInput.value = "";
+        renderTasks();
+      });
+
+      renderTasks();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!--
+  Hari ke-6: Loop dan Rendering
+  Tugas:
+  1. buat array nama
+  2. tampilkan semua nama di halaman dengan loop
+-->
+
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 6 - Loop</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #ecfeff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .card {
+        background: white;
+        padding: 24px;
+        border-radius: 12px;
+        width: 360px;
+      }
+      ul {
+        padding-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Daftar Siswa</h2>
+      <ul id="siswaList"></ul>
+    </div>
+
+    <script>
+      const siswa = ["Ayu", "Budi", "Citra", "Deni"];
+      const siswaList = document.getElementById("siswaList");
+
+      siswa.forEach((nama) => {
+        const li = document.createElement("li");
+        li.textContent = nama;
+        siswaList.appendChild(li);
+      });
+    </script>
+  </body>
+</html>

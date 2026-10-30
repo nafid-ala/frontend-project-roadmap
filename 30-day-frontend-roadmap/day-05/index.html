@@ -1,0 +1,62 @@
+<!--
+  Hari ke-4: Function dan Logic JavaScript
+  Tugas:
+  1. Buat fungsi hitung total
+  2. Tampilkan hasilnya di halaman
+  3. Pahami konsep parameter dan return
+-->
+
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 4 - Function</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #f8fafc;
+      }
+      .card {
+        background: white;
+        padding: 24px;
+        border-radius: 12px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+      }
+      button {
+        padding: 10px 16px;
+        border: none;
+        border-radius: 8px;
+        background: #2563eb;
+        color: white;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Fungsi Hitung Total</h2>
+      <p>Harga per item: <strong>5000</strong></p>
+      <button id="hitungBtn">Hitung Total</button>
+      <p id="hasil">Hasil akan tampil di sini</p>
+    </div>
+
+    <script>
+      function hitungTotal(harga, jumlah) {
+        return harga * jumlah;
+      }
+
+      const hitungBtn = document.getElementById("hitungBtn");
+      const hasil = document.getElementById("hasil");
+
+      hitungBtn.addEventListener("click", function () {
+        const total = hitungTotal(5000, 3);
+        hasil.textContent = `Total: Rp ${total}`;
+      });
+    </script>
+  </body>
+</html>

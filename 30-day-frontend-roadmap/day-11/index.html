@@ -1,0 +1,75 @@
+<!--
+  Hari ke-10: localStorage
+  Tugas:
+  1. simpan nama user ke localStorage
+  2. tampilkan saat halaman dibuka kembali
+-->
+
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 10 - localStorage</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #e0f2fe;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .card {
+        background: white;
+        padding: 24px;
+        border-radius: 12px;
+        width: 420px;
+      }
+      input, button {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+        margin-top: 12px;
+      }
+      button {
+        background: #0284c7;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Form Nama</h2>
+      <input id="namaInput" type="text" placeholder="Masukkan nama" />
+      <button id="saveBtn">Simpan</button>
+      <p id="hasil">Belum ada data</p>
+    </div>
+
+    <script>
+      const namaInput = document.getElementById("namaInput");
+      const saveBtn = document.getElementById("saveBtn");
+      const hasil = document.getElementById("hasil");
+
+      const savedName = localStorage.getItem("namaUser");
+      if (savedName) {
+        hasil.textContent = `Selamat datang, ${savedName}!`;
+        namaInput.value = savedName;
+      }
+
+      saveBtn.addEventListener("click", () => {
+        const value = namaInput.value.trim();
+        if (!value) {
+          alert("Nama tidak boleh kosong");
+          return;
+        }
+
+        localStorage.setItem("namaUser", value);
+        hasil.textContent = `Selamat datang, ${value}!`;
+      });
+    </script>
+  </body>
+</html>

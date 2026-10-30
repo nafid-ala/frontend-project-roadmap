@@ -1,0 +1,57 @@
+<!--
+  Hari ke-8: Struktur Data Task
+  Tugas:
+  1. buat array object tasks
+  2. tampilkan list task di halaman
+  3. pahami struktur data awal untuk to-do app
+-->
+
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 8 - Array of Objects</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f5f3ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .card {
+        background: white;
+        width: 420px;
+        padding: 24px;
+        border-radius: 12px;
+      }
+      ul {
+        padding-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Daftar Tugas</h2>
+      <ul id="taskList"></ul>
+    </div>
+
+    <script>
+      const tasks = [
+        { id: 1, name: "Belajar JavaScript", done: false },
+        { id: 2, name: "Buat project to-do", done: true },
+        { id: 3, name: "Review hasil belajar", done: false },
+      ];
+
+      const taskList = document.getElementById("taskList");
+
+      tasks.forEach((task) => {
+        const li = document.createElement("li");
+        li.textContent = `${task.name} (${task.done ? "selesai" : "belum selesai"})`;
+        taskList.appendChild(li);
+      });
+    </script>
+  </body>
+</html>

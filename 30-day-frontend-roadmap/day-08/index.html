@@ -1,0 +1,81 @@
+<!--
+  Hari ke-7: Event Listener dan Validasi Form
+  Tugas:
+  1. buat form sederhana
+  2. validasi input tidak boleh kosong
+  3. tampilkan hasil di halaman
+-->
+
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 7 - Form Validation</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f0fdf4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .card {
+        background: white;
+        width: 460px;
+        padding: 24px;
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+      }
+      input, button {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+        margin-top: 12px;
+      }
+      button {
+        border: none;
+        background: #16a34a;
+        color: white;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      #hasil {
+        margin-top: 18px;
+        background: #ecfdf5;
+        padding: 12px;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Form Sederhana</h2>
+      <form id="formPesan">
+        <input id="nama" type="text" placeholder="Nama kamu" />
+        <button type="submit">Kirim</button>
+      </form>
+      <div id="hasil">Belum ada hasil.</div>
+    </div>
+
+    <script>
+      const form = document.getElementById("formPesan");
+      const nama = document.getElementById("nama");
+      const hasil = document.getElementById("hasil");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const value = nama.value.trim();
+        if (!value) {
+          alert("Nama tidak boleh kosong!");
+          return;
+        }
+
+        hasil.textContent = `Halo, ${value}! Data berhasil dikirim.`;
+        form.reset();
+      });
+    </script>
+  </body>
+</html>

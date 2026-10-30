@@ -1,0 +1,101 @@
+<!--
+  Hari ke-11: Notes App Sederhana
+  Tugas:
+  1. input catatan
+  2. simpan ke localStorage
+  3. tampilkan list catatan
+  4. hapus catatan
+-->
+
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 11 - Notes App</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f5f3ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .card {
+        width: 420px;
+        background: white;
+        padding: 24px;
+        border-radius: 12px;
+      }
+      input, button {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+        margin-top: 10px;
+      }
+      button {
+        background: #7c3aed;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      ul {
+        padding-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Catatan</h2>
+      <input id="noteInput" type="text" placeholder="Masukkan catatan" />
+      <button id="addBtn">Tambah</button>
+      <ul id="noteList"></ul>
+    </div>
+
+    <script>
+      const noteInput = document.getElementById("noteInput");
+      const addBtn = document.getElementById("addBtn");
+      const noteList = document.getElementById("noteList");
+
+      let notes = JSON.parse(localStorage.getItem("notes")) || [];
+
+      function renderNotes() {
+        noteList.innerHTML = "";
+
+        notes.forEach((note, index) => {
+          const li = document.createElement("li");
+          li.textContent = note;
+
+          const delBtn = document.createElement("button");
+          delBtn.textContent = "Hapus";
+          delBtn.style.marginLeft = "10px";
+          delBtn.addEventListener("click", () => {
+            notes.splice(index, 1);
+            localStorage.setItem("notes", JSON.stringify(notes));
+            renderNotes();
+          });
+
+          li.appendChild(delBtn);
+          noteList.appendChild(li);
+        });
+      }
+
+      addBtn.addEventListener("click", () => {
+        const value = noteInput.value.trim();
+        if (!value) {
+          alert("Catatan tidak boleh kosong");
+          return;
+        }
+
+        notes.push(value);
+        localStorage.setItem("notes", JSON.stringify(notes));
+        noteInput.value = "";
+        renderNotes();
+      });
+
+      renderNotes();
+    </script>
+  </body>
+</html>

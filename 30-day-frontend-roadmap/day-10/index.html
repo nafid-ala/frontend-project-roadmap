@@ -1,0 +1,81 @@
+<!--
+  Hari ke-9: Counter App
+  Tugas:
+  1. buat tombol tambah
+  2. tombol kurang
+  3. tombol reset
+  4. paham state sederhana di frontend
+-->
+
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 9 - Counter App</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #fefce8;
+      }
+      .card {
+        background: white;
+        padding: 28px;
+        border-radius: 14px;
+        width: 250px;
+        text-align: center;
+      }
+      button {
+        margin: 6px;
+        padding: 10px 16px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      #count {
+        font-size: 32px;
+        margin: 16px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Counter</h2>
+      <div id="count">0</div>
+      <button id="minusBtn">-</button>
+      <button id="plusBtn">+</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+
+    <script>
+      let count = 0;
+      const countEl = document.getElementById("count");
+      const minusBtn = document.getElementById("minusBtn");
+      const plusBtn = document.getElementById("plusBtn");
+      const resetBtn = document.getElementById("resetBtn");
+
+      function updateUI() {
+        countEl.textContent = count;
+      }
+
+      minusBtn.addEventListener("click", () => {
+        count--;
+        updateUI();
+      });
+
+      plusBtn.addEventListener("click", () => {
+        count++;
+        updateUI();
+      });
+
+      resetBtn.addEventListener("click", () => {
+        count = 0;
+        updateUI();
+      });
+    </script>
+  </body>
+</html>

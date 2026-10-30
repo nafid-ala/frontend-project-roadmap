@@ -1,0 +1,57 @@
+<!--
+  Hari ke-5: Array dan Object
+  Tugas:
+  1. buat array produk
+  2. tampilkan ke halaman
+  3. pahami object dan akses data
+-->
+
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 5 - Array & Object</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #fef2f2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .card {
+        background: white;
+        padding: 24px;
+        border-radius: 14px;
+        width: 420px;
+      }
+      ul {
+        padding-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Daftar Produk</h2>
+      <ul id="produkList"></ul>
+    </div>
+
+    <script>
+      const produk = [
+        { nama: "Laptop", harga: 8000000 },
+        { nama: "Mouse", harga: 150000 },
+        { nama: "Keyboard", harga: 350000 },
+      ];
+
+      const produkList = document.getElementById("produkList");
+
+      produk.forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = `${item.nama} - Rp ${item.harga}`;
+        produkList.appendChild(li);
+      });
+    </script>
+  </body>
+</html>
