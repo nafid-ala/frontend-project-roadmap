@@ -1,0 +1,61 @@
+<!--
+  Day 25: Deploy Checklist
+  Tugas: buat halaman yang menampilkan langkah deploy.
+-->
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 25 - Deploy Checklist</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f0fdf4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .card {
+        width: 520px;
+        background: white;
+        border-radius: 14px;
+        padding: 24px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+      }
+      ul {
+        padding-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const checklist = [
+        'Push project ke GitHub',
+        'Buka Vercel atau Netlify',
+        'Import repo',
+        'Deploy project',
+        'Cek hasil dan bagikan link',
+      ];
+
+      const App = () => (
+        <div className="card">
+          <h2>Checklist Deploy</h2>
+          <ul>
+            {checklist.map((item, index) => (
+              <li key={index}>{index + 1}. {item}</li>
+            ))}
+          </ul>
+        </div>
+      );
+
+      ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+    </script>
+  </body>
+</html>

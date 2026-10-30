@@ -1,0 +1,107 @@
+<!--
+  Day 19: To-do app React tahap 1
+  Tugas: tambah task, tampilkan list, hapus item.
+-->
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 19 - To-do App React</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #eef2ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .card {
+        width: 480px;
+        background: white;
+        padding: 24px;
+        border-radius: 14px;
+        box-shadow: 0 12px 20px rgba(0,0,0,0.08);
+      }
+      .row {
+        display: flex;
+        gap: 10px;
+      }
+      input, button {
+        padding: 10px;
+        border-radius: 8px;
+      }
+      input {
+        flex: 1;
+      }
+      button {
+        border: none;
+        background: #2563eb;
+        color: white;
+        cursor: pointer;
+      }
+      ul {
+        padding-left: 20px;
+        margin-top: 20px;
+      }
+      li {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const App = () => {
+        const [tasks, setTasks] = React.useState([]);
+        const [input, setInput] = React.useState('');
+
+        const addTask = () => {
+          const value = input.trim();
+          if (!value) return;
+
+          setTasks((prev) => [...prev, { id: Date.now(), text: value }]);
+          setInput('');
+        };
+
+        const deleteTask = (id) => {
+          setTasks((prev) => prev.filter((task) => task.id !== id));
+        };
+
+        return (
+          <div className="card">
+            <h2>To-do App</h2>
+            <div className="row">
+              <input
+                type="text"
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                placeholder="Masukkan tugas"
+              />
+              <button onClick={addTask}>Tambah</button>
+            </div>
+
+            <ul>
+              {tasks.map((task) => (
+                <li key={task.id}>
+                  <span>{task.text}</span>
+                  <button onClick={() => deleteTask(task.id)}>Hapus</button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        );
+      };
+
+      ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+    </script>
+  </body>
+</html>

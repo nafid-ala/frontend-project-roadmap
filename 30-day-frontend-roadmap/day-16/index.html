@@ -1,0 +1,67 @@
+<!--
+  Day 16: State di React
+  Tugas: bikin counter app menggunakan useState.
+-->
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 16 - React State</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #fefce8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .card {
+        background: white;
+        padding: 28px;
+        border-radius: 14px;
+        width: 240px;
+        text-align: center;
+        box-shadow: 0 16px 25px rgba(0,0,0,0.08);
+      }
+      button {
+        margin: 0 6px;
+        padding: 10px 16px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        background: #2563eb;
+        color: white;
+      }
+      .count {
+        font-size: 36px;
+        margin: 16px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const App = () => {
+        const [count, setCount] = React.useState(0);
+
+        return (
+          <div className="card">
+            <h2>Counter</h2>
+            <div className="count">{count}</div>
+            <button onClick={() => setCount(count - 1)}>-</button>
+            <button onClick={() => setCount(count + 1)}>+</button>
+            <button onClick={() => setCount(0)}>Reset</button>
+          </div>
+        );
+      };
+
+      ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+    </script>
+  </body>
+</html>

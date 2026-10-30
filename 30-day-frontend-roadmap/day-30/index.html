@@ -1,0 +1,66 @@
+<!--
+  Day 30: Final Showcase
+  Tugas: tampilkan salah satu project terbaik yang siap dipamerkan.
+-->
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 30 - Final Showcase</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #fef3c7, #e0f2fe);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .card {
+        width: 540px;
+        background: white;
+        border-radius: 18px;
+        padding: 28px;
+        box-shadow: 0 20px 35px rgba(0,0,0,0.08);
+      }
+      .badge {
+        display: inline-block;
+        background: #fef3c7;
+        color: #92400e;
+        border-radius: 999px;
+        padding: 8px 12px;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .project-box {
+        margin-top: 18px;
+        background: #f8fafc;
+        padding: 16px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const App = () => (
+        <div className="card">
+          <div className="badge">Final Project</div>
+          <h2>Project Showcase</h2>
+          <div className="project-box">
+            <h3>To-do App</h3>
+            <p>Project ini sudah mencakup HTML, CSS, JavaScript, React, dan state management dasar.</p>
+            <p>Fitur: tambah, hapus, checklist, filter, localStorage.</p>
+          </div>
+        </div>
+      );
+
+      ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+    </script>
+  </body>
+</html>

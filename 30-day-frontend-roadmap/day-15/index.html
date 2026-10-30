@@ -1,0 +1,48 @@
+<!--
+  Day 15: Intro React
+  Tugas: bikin komponen sederhana yang menampilkan "Hello React".
+  Jalankan file ini di browser. Pastikan koneksi internet aktif karena React CDN dipakai.
+-->
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 15 - Intro React</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: #f8fafc;
+      }
+      .card {
+        background: white;
+        padding: 32px;
+        border-radius: 16px;
+        box-shadow: 0 20px 35px rgba(15, 23, 42, 0.08);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const App = () => {
+        return (
+          <div className="card">
+            <h1>Hello React</h1>
+            <p>Hari ke-15: belajar React dasar.</p>
+          </div>
+        );
+      };
+
+      ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+    </script>
+  </body>
+</html>

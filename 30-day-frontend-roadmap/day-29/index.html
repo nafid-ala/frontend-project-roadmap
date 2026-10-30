@@ -1,0 +1,60 @@
+<!--
+  Day 29: Review & Dokumentasi
+  Tugas: rangkum progress yang sudah dibuat dan siap dijelaskan.
+-->
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 29 - Review</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #eef2ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .card {
+        width: 500px;
+        background: white;
+        padding: 24px;
+        border-radius: 12px;
+      }
+      ul {
+        padding-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const review = [
+        'JavaScript lebih paham',
+        'DOM dan event listener sudah dipraktikkan',
+        'To-do app sudah dibuat',
+        'React dasar mulai dipelajari',
+        'Project bisa ditampilkan di GitHub',
+      ];
+
+      const App = () => (
+        <div className="card">
+          <h2>Review Akhir</h2>
+          <ul>
+            {review.map((item, index) => (
+              <li key={index}>{index + 1}. {item}</li>
+            ))}
+          </ul>
+        </div>
+      );
+
+      ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+    </script>
+  </body>
+</html>
