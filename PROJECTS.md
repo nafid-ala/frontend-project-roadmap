@@ -1,248 +1,190 @@
-# Frontend Cheat Sheet
+# Roadmap Belajar Frontend Developer
 
-Cheat sheet ini berisi ringkasan cepat untuk membantu kamu saat belajar frontend.
+Roadmap ini dibuat untuk membantu kamu belajar frontend secara terstruktur dengan pendekatan project-based learning. Fokus utamanya adalah belajar sambil membangun project nyata, bukan sekadar membaca teori.
 
-## 1. Git & GitHub
+## Tujuan roadmap
+- Memahami dasar frontend
+- Menguasai JavaScript dan DOM
+- Belajar React untuk frontend modern
+- Mampu membangun project yang bermanfaat dan bisa masuk portfolio
+- Melatih disiplin lewat project kecil yang berulang
 
-### Inisialisasi repo
-```bash
-git init
-```
+## Fase 1: Fondasi Web
+Target:
+- HTML dasar
+- CSS dasar
+- JavaScript dasar
+- Git dan GitHub
 
-### Cek status
-```bash
-git status
-```
+Topik:
+- Struktur HTML
+- Form, tabel, list, media
+- CSS selector, layout, flexbox, grid
+- Responsiveness
+- JS variables, functions, conditionals, loops
+- DOM manipulation
+- Event handling
+- Git init, add, commit, push
 
-### Tambahkan file
-```bash
-git add .
-```
+Project yang cocok:
+- landing page
+- portfolio pribadi
+- kalkulator sederhana
+- form validasi
 
-### Commit
-```bash
-git commit -m "Menambahkan fitur baru"
-```
+Durasi: 2–4 minggu
 
-### Branch baru
-```bash
-git checkout -b feature/nama-feature
-```
+## Fase 2: Web App Interaktif
+Target:
+- JavaScript lanjutan
+- API fetch
+- Data JSON
+- localStorage
 
-### Push ke GitHub
-```bash
-git remote add origin https://github.com/username/repo.git
-git branch -M main
-git push -u origin main
-```
+Topik:
+- async/await
+- fetch()
+- Promise
+- JSON parsing
+- localStorage
+- CRUD sederhana di frontend
+- state lokal
 
-## 2. HTML
+Project yang cocok:
+- to-do app
+- notes app
+- weather app
+- quiz app
+- expense tracker sederhana
 
-### Struktur dasar
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>Hello World</h1>
-  </body>
-</html>
-```
+Durasi: 2–4 minggu
 
-### Form
-```html
-<form>
-  <input type="text" placeholder="Nama" />
-  <button type="submit">Kirim</button>
-</form>
-```
+## Fase 3: React Dasar
+Target:
+- Paham component
+- Paham props dan state
+- Paham hooks
+- Bisa membuat UI modular
 
-## 3. CSS
+Topik:
+- component
+- props
+- state
+- useState
+- useEffect
+- conditional rendering
+- rendering list
+- form handling
 
-### Selector dasar
-```css
-h1 {
-  color: blue;
-}
+Project yang cocok:
+- dashboard sederhana
+- blog UI
+- task manager
+- portfolio React
 
-.container {
-  display: flex;
-  gap: 16px;
-}
-```
+Durasi: 3–4 minggu
 
-### Flexbox
-```css
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-}
-```
+## Fase 4: React Lanjutan
+Target:
+- Struktur project rapi
+- API integration
+- Component reusable
+- Routing
+- State management dasar
 
-### Grid
-```css
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-```
+Topik:
+- React Router
+- reusable components
+- API integration
+- loading state
+- error state
+- context API (opsional)
 
-### Responsive media query
-```css
-@media (max-width: 768px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-}
-```
+Project yang cocok:
+- dashboard admin
+- job board UI
+- product catalog
+- blog app
 
-## 4. JavaScript
+Durasi: 3–4 minggu
 
-### Variabel
-```js
-const nama = "Budi";
-let umur = 20;
-```
+## Fase 5: Styling Modern & Deployment
+Target:
+- UI lebih rapi dan profesional
+- Deploy ke Vercel / Netlify
+- Portfolio siap dipamerkan
 
-### Function
-```js
-function hitung(a, b) {
-  return a + b;
-}
-```
+Topik:
+- Tailwind CSS
+- responsive design
+- UX dasar
+- deployment
+- Vercel / Netlify
 
-### Array
-```js
-const angka = [1, 2, 3, 4];
-console.log(angka[0]);
-```
+Project yang cocok:
+- portfolio premium
+- landing page startup
+- dashboard modern
+- ecommerce landing page
 
-### Object
-```js
-const user = {
-  name: "Budi",
-  age: 20,
-};
-```
+Durasi: 2–3 minggu
 
-### DOM
-```js
-document.querySelector("h1").textContent = "Halo";
-```
+## Urutan belajar yang efektif
+1. HTML + CSS + JavaScript dasar
+2. Project kecil frontend
+3. JavaScript lanjutan
+4. React dasar
+5. React lanjutan
+6. Styling modern
+7. Deployment
+8. Revisi project ke versi lebih baik
 
-### Event listener
-```js
-document.getElementById("btn").addEventListener("click", () => {
-  alert("Tombol ditekan");
-});
-```
+## Project yang direkomendasikan berdasarkan level
 
-### Fetch API
-```js
-fetch("https://jsonplaceholder.typicode.com/users")
-  .then((response) => response.json())
-  .then((data) => console.log(data))
-  .catch((error) => console.error(error));
-```
+### Pemula
+- portfolio pribadi
+- landing page
+- kalkulator
+- form login
+- to-do app awal
 
-## 5. React
+### Menengah
+- notes app
+- weather app
+- dashboard sederhana
+- blog frontend
+- expense tracker
 
-### Komponen dasar
-```jsx
-function App() {
-  return <h1>Hello React</h1>;
-}
+### Lanjut
+- admin dashboard
+- mini ecommerce UI
+- booking app UI
+- social media dashboard
+- portfolio dengan blog dan project section
 
-export default App;
-```
+## Sumber belajar utama
+- Web Programming UNPAS
+- Kelas Terbuka
+- Programmer Zaman Now
+- BuildWith Angga
+- Codepolitan
+- MDN Web Docs
+- freeCodeCamp
 
-### useState
-```jsx
-import { useState } from "react";
+## Aturan belajar
+- Fokus pada satu stack dulu
+- Buat project kecil dan selesaikan sampai hasilnya bisa dipakai
+- Commit tiap hari atau tiap progress besar
+- Simpan semua project di GitHub
+- Jangan pindah ke teknologi baru sebelum project sebelumnya selesai
 
-function Counter() {
-  const [count, setCount] = useState(0);
-
-  return (
-    <button onClick={() => setCount(count + 1)}>
-      Count: {count}
-    </button>
-  );
-}
-```
-
-### useEffect
-```jsx
-import { useEffect, useState } from "react";
-
-function App() {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((res) => res.json())
-      .then((json) => setData(json));
-  }, []);
-
-  return <div>{data.length}</div>;
-}
-```
-
-## 6. Tailwind CSS (opsional)
-
-### Instal Tailwind
-```bash
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-```
-
-### Contoh class
-```html
-<div class="bg-blue-500 text-white p-4 rounded-lg">Halo</div>
-```
-
-## 7. Deployment
-
-### Vercel
-```bash
-npm install -g vercel
-vercel
-```
-
-### Netlify
-- upload folder build
-- atau deploy via GitHub integration
-
-## 8. Tips cepat
-- Baca error dulu, jangan buru-buru copy paste
-- Gunakan console.log untuk debug
-- Pakai React dev tools jika perlu
-- Simpan project di GitHub
-- Buat satu project sampai selesai, bukan banyak setengah-setengah
-
-## 9. Shortcut umum
-```bash
-npm install
-npm run dev
-npm run build
-```
-
-## 10. Checklist sebelum selesai project
-- [ ] UI sudah rapi
-- [ ] responsive
-- [ ] fitur utama berfungsi
-- [ ] tidak ada error di console
-- [ ] project bisa dibuka di browser
-- [ ] hasil dipush ke GitHub
-- [ ] README dibuat singkat
+## Cara belajar yang benar
+- Baca teori secukupnya
+- Langsung praktek di project
+- Debug masalah sendiri dulu
+- Cari solusi di dokumentasi atau Stack Overflow
+- Jangan takut error, error adalah bagian dari proses
 
 ---
 
-Gunakan cheat sheet ini saat kamu sedang coding agar lebih cepat dan lebih fokus.
+Jika ingin lanjut ke project nyata, buka file `PROJECTS.md` dan pilih project yang paling sesuai levelmu.

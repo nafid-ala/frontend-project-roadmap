@@ -1,168 +1,51 @@
-# Roadmap Belajar Frontend Developer
+# Frontend Project Roadmap
 
-Roadmap ini dibuat untuk membantu kamu belajar frontend secara terstruktur dengan pendekatan project-based learning. Fokus utamanya adalah: belajar sambil membuat proyek nyata, bukan hanya membaca teori.
+Roadmap belajar frontend developer dengan pendekatan project-based learning. Repo ini dibuat untuk membantu kamu belajar sambil membangun proyek nyata, mulai dari dasar hingga level siap kerja.
 
-## Tujuan roadmap
-- Memahami basic web development
-- Menguasai JavaScript dan DOM
-- Belajar React untuk frontend modern
-- Membuat project yang bisa dipakai dan masuk portfolio
-- Melatih disiplin lewat project kecil yang berulang
+## Tujuan repo ini
+- Belajar frontend secara sistematis
+- Fokus pada proyek nyata, bukan sekadar teori
+- Menyediakan roadmap, project list, aturan belajar, dan cheat sheet
+- Membantu kamu membangun portofolio GitHub yang konkret
 
-## Fase belajar
+## Cara pakai repo ini
+1. Baca `README.md` sampai selesai
+2. Buka `ROADMAP.md`
+3. Pilih project yang sesuai dengan levelmu
+4. Lakukan project satu per satu sampai selesai
+5. Commit hasil kerja ke GitHub
+6. Gunakan project itu sebagai bukti skill di portofolio
 
-### Fase 1: Fondasi Web
-Target:
-- HTML dasar
-- CSS dasar
-- JavaScript dasar
-- Git dan GitHub
+## Struktur repo
+- `README.md` — ringkasan repo
+- `ROADMAP.md` — roadmap belajar fase per fase
+- `PROJECTS.md` — daftar project dan level kesulitan
+- `RULES.md` — aturan belajar agar konsisten
+- `CHEATSHEET.md` — source code pendek dan shortcut penting
+- `RESOURCES.md` — daftar sumber belajar Indonesia & internasional
+- `LEARNING_PLAN.md` — jadwal belajar 8 minggu
+- `FAQ.md` — pertanyaan umum seputar belajar frontend
+- `.gitignore` — file yang diabaikan Git
+- `LICENSE` — lisensi MIT
 
-Topik:
-- Struktur HTML
-- Form, tabel, list, media
-- CSS selector, layout, flexbox, grid
-- Responsiveness
-- JS variables, functions, conditionals, loops
-- DOM manipulation
-- Event handling
-- Git init, add, commit, push
-
-Project yang cocok:
-- landing page
-- portfolio pribadi
-- kalkulator sederhana
-- form validasi
-
-Durasi: 2–4 minggu
-
-### Fase 2: Web App Interaktif
-Target:
-- JavaScript lanjutan
+## Target belajar
+- HTML, CSS, JavaScript
+- DOM dan interaksi user
 - API fetch
-- Data JSON
-- localStorage
+- React dasar sampai intermediate
+- Styling modern (Tailwind atau CSS murni)
+- Git & GitHub
+- Deployment ke Vercel / Netlify
 
-Topik:
-- async/await
-- fetch()
-- Promise
-- JSON parsing
-- localStorage
-- CRUD sederhana di frontend
-- state lokal
+## Timeline umum
+- 1–2 bulan: HTML, CSS, JavaScript dasar
+- 2–4 bulan: project frontend, React, API
+- 4–6 bulan: dashboard, portfolio, app kompleks
 
-Project yang cocok:
-- to-do app
-- notes app
-- weather app
-- quiz app
-- expense tracker sederhana
-
-Durasi: 2–4 minggu
-
-### Fase 3: React Dasar
-Target:
-- Paham component
-- Paham props dan state
-- Paham hooks
-- Bisa membuat UI modular
-
-Topik:
-- component
-- props
-- state
-- useState
-- useEffect
-- conditional rendering
-- rendering list
-- form handling
-
-Project yang cocok:
-- dashboard sederhana
-- blog UI
-- task manager
-- portfolio React
-
-Durasi: 3–4 minggu
-
-### Fase 4: React Lanjutan
-Target:
-- Struktur project rapi
-- API integration
-- Component reusable
-- Routing
-- State management dasar
-
-Topik:
-- React Router
-- reusable components
-- API integration
-- loading state
-- error state
-- context API (opsional)
-
-Project yang cocok:
-- dashboard admin
-- job board UI
-- product catalog
-- blog app
-
-Durasi: 3–4 minggu
-
-### Fase 5: Styling Modern & Deployment
-Target:
-- UI lebih rapi dan profesional
-- Deploy ke Vercel/Netlify
-- Portfolio siap dipamerkan
-
-Topik:
-- Tailwind CSS
-- responsive design
-- UX dasar
-- deployment
-- GitHub Pages / Vercel / Netlify
-
-Project yang cocok:
-- portfolio premium
-- landing page startup
-- dashboard modern
-- ecommerce landing page
-
-Durasi: 2–3 minggu
-
-## Urutan belajar yang efektif
-1. HTML + CSS + JavaScript dasar
-2. Project kecil frontend
-3. JavaScript lanjutan
-4. React dasar
-5. React lanjutan
-6. Styling modern
-7. Deployment
-8. Revisi project ke versi lebih baik
-
-## Project yang direkomendasikan berdasarkan level
-
-### Pemula
-- portfolio pribadi
-- landing page
-- kalkulator
-- form login
-- to-do app awal
-
-### Menengah
-- notes app
-- weather app
-- dashboard sederhana
-- blog frontend
-- expense tracker
-
-### Lanjut
-- admin dashboard
-- mini ecommerce UI
-- booking app UI
-- social media dashboard
-- portfolio dengan blog dan project section
+## Level yang disarankan
+- Pemula: landing page, portfolio, to-do app
+- Menengah: notes app, weather app, dashboard
+- Lanjut: ecommerce UI, admin dashboard, booking app
 
 ## Sumber belajar utama
 - Web Programming UNPAS
@@ -173,20 +56,48 @@ Durasi: 2–3 minggu
 - MDN Web Docs
 - freeCodeCamp
 
-## Aturan belajar
-- Fokus pada satu stack dulu
-- Buat project kecil dan selesaikan sampai hasilnya bisa dipakai
-- Commit tiap hari atau tiap progress besar
-- Simpan semua project di GitHub
-- Jangan pindah ke teknologi baru sebelum project sebelumnya selesai
+## Aturan belajar yang penting
+- Fokus pada satu bahasa dulu: JavaScript
+- Jangan pindah stack sebelum 2–3 project selesai
+- Buat project kecil dulu, lalu naik level
+- Tulis dokumentasi singkat untuk setiap project
+- Commit secara rutin setiap progres
+- Gunakan GitHub sebagai portofolio
 
-## Cara belajar yang benar
-- Baca teori secukupnya
-- Langsung praktek di project
-- Debug masalah sendiri dulu
-- Cari solusi di dokumentasi atau Stack Overflow
-- Jangan takut error, error adalah bagian dari proses
+## Project yang direkomendasikan
+- Portfolio pribadi
+- Landing page
+- To-do app
+- Notes app
+- Weather app
+- Expense tracker
+- Blog frontend
+- Dashboard admin
+- Mini ecommerce
+
+## Langkah awal
+```bash
+git clone https://github.com/nafid-ala/frontend-project-roadmap.git
+cd frontend-project-roadmap
+```
+
+Lanjutkan dengan membaca file berikut:
+- `ROADMAP.md`
+- `PROJECTS.md`
+- `LEARNING_PLAN.md`
+- `CHEATSHEET.md`
+- `RESOURCES.md`
+
+## Motto belajar
+Belajar frontend bukan hanya soal menghafal syntax, tapi membangun sesuatu yang bisa dilihat, dipakai, dan diulang.
+
+## Apa yang akan kamu dapatkan?
+- Dasar frontend yang kuat
+- Project nyata yang masuk portfolio
+- Kebiasaan coding yang konsisten
+- Struktur belajar yang terarah
+- Kepercayaan diri untuk lanjut ke level berikutnya
 
 ---
 
-Jika ingin lanjut ke project nyata, buka file `PROJECTS.md` dan pilih project yang paling sesuai levelmu.
+Selamat belajar dan semoga cepat berkembang.
